@@ -1,0 +1,126 @@
+.search-page-header {
+	display: flex;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 100;
+	align-items: flex-start;
+	padding: 25px 25px 15px 25px;
+	border-bottom: 1px solid lightgray;
+}
+
+.search-page-logo {
+	object-fit: contain;
+	height: 30px;
+	margin-top: 10px;
+	margin-right: 50px;
+}
+
+.search-page-search-and-options {
+	width: 75vw;
+}
+
+.search-page-search-and-options > .search-div > .search-form > .search-input-div {
+	margin-top: 0;
+	width: unset;
+	margin: unset;
+	max-width: unset;
+	background-color: #fff;
+	box-shadow: 0 1px 6px rgba(32,33,36,.28);
+	border-color: rgba(223,225,229,0);
+	flex-direction: row-reverse;
+}
+
+.search-page-options {
+	display: flex;
+	align-items: center;
+	color: grey;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 70vw;
+	font-size: 1rem;
+}
+
+.search-page-options a {
+	text-decoration: none;
+	color: grey;
+}
+
+.search-page-option {
+	display: flex;
+	align-items: center;
+	margin-right: 17.5px;
+}
+
+.search-page-option a {
+	margin-left: 5px;
+}
+
+.search-page-option > .MuiSvgIcon-root {
+	font-size: inherit;
+}
+
+.current-option, .current-option > a {
+	color: #1a73e8;
+}
+
+.search-page-avatar {
+	display: flex;
+	justify-content: right;
+	padding: 10px 20px;
+	align-items: center;
+}
+
+.search-page-avatar > .MuiSvgIcon-root {
+	margin-right: 20px;
+	color: gray;
+}
+
+.search-page-results {
+	max-width: 650px;
+	margin-top: 20px;
+	margin-left: 240px;
+	margin-bottom: 100px;
+}
+
+.search-page-result-count {
+	color: #70757a;
+	font-size: 14px;
+}
+
+.search-page-result {
+	margin: 40px 0;
+}
+
+.search-page-result-title {
+	text-decoration: none;
+	color: #1a0dab;
+}
+
+.search-page-result-title:hover {
+	text-decoration: underline;
+}
+
+.search-page-result-title > h2 {
+	font-weight: 500;
+}
+
+.search-page-result-snippet {
+	margin-top: 10px;
+}
+
+.search-page-loader-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.search-page-limit-exceeded {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	font-size: 20px;
+	color: darkred;
+}
