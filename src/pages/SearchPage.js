@@ -96,11 +96,6 @@ function SearchPage() {
 				<div className='search-page-loader-div'>
 					<CircularProgress />
 				</div>
-
-				// <div className="search-page-limit-exceeded">
-				// 	<p> Hemos llegado al límite de búsquedas permitidas por Google. 😅</p>
-				// 	<p> Vuelva a intentarlo mañana. 😊</p>
-				// </div>
 			)}
 		</div>
 	);
