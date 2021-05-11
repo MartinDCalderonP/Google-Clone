@@ -77,10 +77,10 @@
 }
 
 .search-page-results {
-	max-width: 650px;
+	width: 70vw;
 	margin-top: 20px;
-	margin-left: 240px;
 	margin-bottom: 100px;
+	margin-left: 10%;
 }
 
 .search-page-result-count {
@@ -123,4 +123,42 @@
 	margin-top: 50px;
 	font-size: 20px;
 	color: darkred;
+}
+
+@media (max-width: 720px) {
+	.search-page-header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.search-page-logo {
+		object-fit: contain;
+		height: 30px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+
+	.search-page-avatar {
+		display: none;
+	}
+
+	.search-page-search-and-options {
+		width: 90vw;
+	}
+
+	.search-page-options {
+		width: 90vw;
+		margin-left: 0px;
+		flex-wrap: nowrap;
+		overflow-y: scroll;
+	}
+
+	.search-page-options .MuiSvgIcon-root {
+		display: none;
+	}
+
+	.search-page-results {
+		width: 80vw;
+	}
 }

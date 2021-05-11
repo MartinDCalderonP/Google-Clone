@@ -11,9 +11,8 @@ import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AppsIcon from '@material-ui/icons/Apps';
-import { Avatar } from '@material-ui/core';
+import { Avatar, CircularProgress } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 function SearchPage() {
 	// eslint-disable-next-line
