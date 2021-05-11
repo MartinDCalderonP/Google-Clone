@@ -58,16 +58,16 @@ function Search(props) {
 						</div>
 					</>
 				) : (
-					<div className="search-buttons-div">
+					<div className="search-buttons-div hidden">
 						<Button
-							className="search-buttons-hidden"
+							className="search-buttons hidden"
 							type="submit"
 							onClick={search}
 							variant="outlined"
 						>
 							Buscar con Google
 						</Button>
-						<Button className="search-buttons-hidden" variant="outlined">
+						<Button className="search-buttons hidden" variant="outlined">
 							Me siento con suerte
 						</Button>
 					</div>

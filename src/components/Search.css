@@ -70,6 +70,6 @@
 	text-decoration: underline;
 }
 
-.search-buttons-hidden {
-	display: none !important;
+.hidden {
+	display: none;
 }
