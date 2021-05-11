@@ -73,7 +73,12 @@ function SearchPage() {
 				</div>
 			</div>
 
-			{data?.searchInformation ? (
+			{data?.error ? (
+				<div className="search-page-limit-exceeded">
+					<h3>Se acabaron las consultas. 😅</h3>
+					<h3>Vuelva a intentarlo mañana. 😊</h3>
+				</div>
+			) : data?.searchInformation ? (
 				<div className="search-page-results">
 					<p className="search-page-result-count">
 						Cerca de {data?.searchInformation.formattedTotalResults} resultados
