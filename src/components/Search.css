@@ -69,3 +69,7 @@
 .search-offerBy-div a:hover {
 	text-decoration: underline;
 }
+
+.search-buttons-hidden {
+	display: none !important;
+}

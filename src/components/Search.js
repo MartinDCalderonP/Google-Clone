@@ -7,6 +7,7 @@ import { useStateValue } from '../StateProvider';
 import { actionTypes } from '../reducer';
 
 function Search(props) {
+	// eslint-disable-next-line
 	const [{}, dispatch] = useStateValue();
 
 	const [inputTerm, setInputTerm] = useState('');
@@ -14,9 +15,9 @@ function Search(props) {
 
 	useEffect(() => {
 		if (props.inputValue) {
-			setInputTerm(props.inputValue);	
+			setInputTerm(props.inputValue);
 		}
-	}, [props.inputValue])
+	}, [props.inputValue]);
 
 	const handleInputTermChange = (e) => {
 		setInputTerm(e.target.value);
@@ -38,10 +39,7 @@ function Search(props) {
 			<form className="search-form">
 				<div className="search-input-div">
 					<SearchIcon className="search-icon" />
-					<input
-						value={inputTerm}
-						onChange={handleInputTermChange}
-					/>
+					<input value={inputTerm} onChange={handleInputTermChange} />
 				</div>
 
 				{!props.hideButtons ? (
@@ -60,7 +58,19 @@ function Search(props) {
 						</div>
 					</>
 				) : (
-					<></>
+					<div className="search-buttons-div">
+						<Button
+							className="search-buttons-hidden"
+							type="submit"
+							onClick={search}
+							variant="outlined"
+						>
+							Buscar con Google
+						</Button>
+						<Button className="search-buttons-hidden" variant="outlined">
+							Me siento con suerte
+						</Button>
+					</div>
 				)}
 			</form>
 		</div>

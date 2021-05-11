@@ -16,6 +16,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 function SearchPage() {
+	// eslint-disable-next-line
 	const [{ term }, dispatch] = useStateValue();
 	const { data } = useGoogleSearch(term);
 
@@ -31,7 +32,7 @@ function SearchPage() {
 				</Link>
 
 				<div className="search-page-search-and-options">
-					<Search hideButtons inputValue={term}/>
+					<Search hideButtons inputValue={term} />
 
 					<div className="search-page-options">
 						<div className="search-page-option current-option">
@@ -66,8 +67,8 @@ function SearchPage() {
 						</div>
 					</div>
 				</div>
-				
-				<div className='search-page-avatar'>
+
+				<div className="search-page-avatar">
 					<AppsIcon />
 					<Avatar />
 				</div>
@@ -93,7 +94,7 @@ function SearchPage() {
 					))}
 				</div>
 			) : (
-				<div className='search-page-loader-div'>
+				<div className="search-page-loader-div">
 					<CircularProgress />
 				</div>
 			)}
