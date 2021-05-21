@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import { actionTypes } from '../reducer';
 
-function Search(props) {
+function Search({ inputValue, hideButtons }) {
 	// eslint-disable-next-line
 	const [{}, dispatch] = useStateValue();
 
@@ -14,10 +14,10 @@ function Search(props) {
 	const history = useHistory();
 
 	useEffect(() => {
-		if (props.inputValue) {
-			setInputTerm(props.inputValue);
+		if (inputValue) {
+			setInputTerm(inputValue);
 		}
-	}, [props.inputValue]);
+	}, [inputValue]);
 
 	const handleInputTermChange = (e) => {
 		setInputTerm(e.target.value);
@@ -42,7 +42,7 @@ function Search(props) {
 					<input value={inputTerm} onChange={handleInputTermChange} />
 				</div>
 
-				{!props.hideButtons ? (
+				{!hideButtons ? (
 					<>
 						<div className="search-buttons-div">
 							<Button type="submit" onClick={search} variant="outlined">
