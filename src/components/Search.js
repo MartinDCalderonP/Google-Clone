@@ -3,8 +3,8 @@ import './Search.css';
 import SearchIcon from '@material-ui/icons/Search';
 import { Button } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
-import { useStateValue } from '../StateProvider';
-import { actionTypes } from '../reducer';
+import { useStateValue } from '../stateProvider/StateProvider';
+import { actionTypes } from '../stateProvider/reducer';
 
 function Search({ inputValue, hideButtons }) {
 	// eslint-disable-next-line
