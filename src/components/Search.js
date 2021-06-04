@@ -26,12 +26,14 @@ function Search({ inputValue, hideButtons }) {
 	const search = (e) => {
 		e.preventDefault();
 
-		dispatch({
-			type: actionTypes.SET_SEARCH_TERM,
-			term: inputTerm,
-		});
+		if (inputTerm !== '') {
+			dispatch({
+				type: actionTypes.SET_SEARCH_TERM,
+				term: inputTerm,
+			});
 
-		history.push(`/search?q=${inputTerm}`);
+			history.push(`/search?q=${inputTerm}`);
+		}
 	};
 
 	return (

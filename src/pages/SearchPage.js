@@ -13,6 +13,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar, CircularProgress } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import { Helmet } from 'react-helmet-async';
 
 function SearchPage() {
 	// eslint-disable-next-line
@@ -21,6 +22,9 @@ function SearchPage() {
 
 	return (
 		<div className="search-page">
+			<Helmet>
+				<title>{term} - Buscar con Google</title>
+			</Helmet>
 			<div className="search-page-header">
 				<Link to="/">
 					<img
@@ -74,13 +78,13 @@ function SearchPage() {
 			</div>
 
 			{data?.error ? (
-				<div className="search-page-limit-exceeded">
-					<h3>Se acabaron las consultas. 😅</h3>
-					<h3>Vuelva a intentarlo mañana. 😊</h3>
+				<div key='0' className="search-page-limit-exceeded">
+					<h3 key='1'>Se acabaron las consultas. 😅</h3>
+					<h3 key='2'>Vuelva a intentarlo mañana. 😊</h3>
 				</div>
 			) : data?.searchInformation ? (
 				<div className="search-page-results">
-					<p className="search-page-result-count">
+					<p className="search-page-result-count" key='p'>
 						Cerca de {data?.searchInformation.formattedTotalResults} resultados
 						({data?.searchInformation.formattedSearchTime} segundos)
 					</p>
