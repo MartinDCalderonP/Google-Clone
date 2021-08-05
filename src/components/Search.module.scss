@@ -10,6 +10,17 @@
 	margin-top: 20px;
 	max-width: 560px;
 
+	&.insideHeader {
+		margin-top: 0;
+		width: unset;
+		margin: unset;
+		max-width: unset;
+		background-color: #fff;
+		box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+		border-color: rgba(223, 225, 229, 0);
+		flex-direction: row-reverse;
+	}
+
 	&:hover {
 		background-color: #fff;
 		box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
