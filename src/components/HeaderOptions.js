@@ -5,10 +5,10 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import AppsIcon from '@material-ui/icons/Apps';
 import { Button } from '@material-ui/core';
 
-export default function HeaderOptions({ searchPage }) {
+export default function HeaderOptions({ settingsIcon }) {
 	return (
 		<div className={styles.headerOptions}>
-			{!searchPage ? (
+			{!settingsIcon ? (
 				<>
 					<Link to="/gmail">Gmail</Link>
 					<Link to="/images">Imágenes</Link>
@@ -16,7 +16,9 @@ export default function HeaderOptions({ searchPage }) {
 			) : (
 				<SettingsIcon />
 			)}
+
 			<AppsIcon />
+			
 			<Button className={styles.loginButton} variant="contained">
 				I<span className={styles.lowercaseSpan}>niciar sesión</span>
 			</Button>
