@@ -1,21 +1,13 @@
 import React from 'react';
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
-import AppsIcon from '@material-ui/icons/Apps';
-import { Button } from '@material-ui/core';
+import HeaderOptions from '../components/HeaderOptions';
 import Search from '../components/Search';
 
 export default function Home() {
 	return (
 		<div className={styles.home}>
-			<div className={styles.header}>
-				<Link to="/gmail">Gmail</Link>
-				<Link to="/images">Imágenes</Link>
-				<AppsIcon />
-				<Button className={styles.loginButton} variant="contained">
-					I<span className={styles.lowercaseSpan}>niciar sesión</span>
-				</Button>
-			</div>
+			<HeaderOptions />
 
 			<div className={styles.body}>
 				<img

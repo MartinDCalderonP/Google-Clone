@@ -1,0 +1,38 @@
+.headerOptions {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 20px;
+	align-items: center;
+
+	a {
+		margin-right: 20px;
+		text-decoration: inherit;
+		color: rgba(0, 0, 0, 0.87);
+		font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	svg {
+		margin-right: 20px;
+		color: gray;
+	}
+
+	.loginButton {
+		background-color: #1a73e8 !important;
+
+		&:hover {
+			background-color: #2b7de9 !important;
+		}
+
+		span {
+			color: #fff;
+
+			.lowercaseSpan {
+				text-transform: lowercase;
+			}
+		}
+	}
+}
