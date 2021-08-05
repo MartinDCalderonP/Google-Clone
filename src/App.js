@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchPage from './pages/SearchPage';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-function App() {
+export default function App() {
 	return (
 		<HelmetProvider>
 			<Helmet>
@@ -26,5 +26,3 @@ function App() {
 		</HelmetProvider>
 	);
 }
-
-export default App;

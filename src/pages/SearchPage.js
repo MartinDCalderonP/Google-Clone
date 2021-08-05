@@ -16,7 +16,7 @@ import { Button, CircularProgress } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Helmet } from 'react-helmet-async';
 
-function SearchPage() {
+export default function SearchPage() {
 	const [{ term }] = useStateValue();
 	const { data } = useGoogleSearch(term);
 
@@ -114,5 +114,3 @@ function SearchPage() {
 		</div>
 	);
 }
-
-export default SearchPage;

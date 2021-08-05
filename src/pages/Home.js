@@ -26,6 +26,12 @@ export default function Home() {
 				<div className="home-search-div">
 					<Search />
 				</div>
+
+				<div className="home__offerBy">
+					<p>
+						Ofrecido por Google en: <Link to="/english"> English </Link>
+					</p>
+				</div>
 			</div>
 		</div>
 	);
