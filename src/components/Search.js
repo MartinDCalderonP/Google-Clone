@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import './Search.css';
-import SearchIcon from '@material-ui/icons/Search';
+import styles from './Search.module.scss';
+import { useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
-import { Link, useHistory } from 'react-router-dom';
+import SearchIcon from '@material-ui/icons/Search';
 import { useStateValue } from '../stateProvider/StateProvider';
 import { actionTypes } from '../stateProvider/reducer';
 
-function Search({ inputValue, hideButtons }) {
+export default function Search({ inputValue, hideButtons }) {
+	const [inputTerm, setInputTerm] = useState('');
 	// eslint-disable-next-line
 	const [{}, dispatch] = useStateValue();
-
-	const [inputTerm, setInputTerm] = useState('');
 	const history = useHistory();
 
 	useEffect(() => {
@@ -23,7 +22,7 @@ function Search({ inputValue, hideButtons }) {
 		setInputTerm(e.target.value);
 	};
 
-	const search = (e) => {
+	const handleSearch = (e) => {
 		e.preventDefault();
 
 		if (inputTerm !== '') {
@@ -37,46 +36,20 @@ function Search({ inputValue, hideButtons }) {
 	};
 
 	return (
-		<div className="search-div">
-			<form className="search-form">
-				<div className="search-input-div">
-					<SearchIcon className="search-icon" />
+		<div>
+			<form>
+				<div className={styles.input}>
+					<SearchIcon className={styles.icon} />
 					<input value={inputTerm} onChange={handleInputTermChange} />
 				</div>
 
-				{!hideButtons ? (
-					<>
-						<div className="search-buttons-div">
-							<Button type="submit" onClick={search} variant="outlined">
-								Buscar con Google
-							</Button>
-							<Button variant="outlined">Me siento con suerte</Button>
-						</div>
-
-						<div className="search-offerBy-div">
-							<p>
-								Ofrecido por Google en: <Link to="/english"> English </Link>
-							</p>
-						</div>
-					</>
-				) : (
-					<div className="search-buttons-div hidden">
-						<Button
-							className="search-buttons hidden"
-							type="submit"
-							onClick={search}
-							variant="outlined"
-						>
-							Buscar con Google
-						</Button>
-						<Button className="search-buttons hidden" variant="outlined">
-							Me siento con suerte
-						</Button>
-					</div>
-				)}
+				<div className={!hideButtons ? styles.buttons : styles.hidden}>
+					<Button type="submit" onClick={handleSearch} variant="outlined">
+						Buscar con Google
+					</Button>
+					<Button variant="outlined">Me siento con suerte</Button>
+				</div>
 			</form>
 		</div>
 	);
 }
-
-export default Search;
