@@ -1,0 +1,71 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 20px;
+	align-items: center;
+
+	a {
+		margin-right: 20px;
+		text-decoration: inherit;
+		color: rgba(0, 0, 0, 0.87);
+		font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	svg {
+		margin-right: 20px;
+		color: gray;
+	}
+
+	.loginButton {
+		background-color: #1a73e8 !important;
+	
+		&:hover {
+			background-color: #2b7de9 !important;
+		}
+	
+		span {
+			color: #fff;
+		}
+	
+		.lowercaseSpan {
+			text-transform: lowercase;
+		}
+	}
+}
+
+.body {
+	margin-top: 3px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+	img {
+		object-fit: contain;
+		height: 92px;
+	}
+}
+
+.offerBy {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	font-size: small;
+
+	a {
+		text-decoration: none;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
