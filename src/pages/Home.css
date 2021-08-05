@@ -27,7 +27,24 @@
 	color: gray;
 }
 
+.home-header-button {
+	background-color: #1a73e8 !important;
+}
+
+.home-header-button:hover {
+	background-color: #2b7de9 !important;
+}
+
+.home-header-button > .MuiButton-label {
+	color: #fff;
+}
+
+.home-header-button-span {
+	text-transform: lowercase;
+}
+
 .home-body {
+	margin-top: 50px;
 	flex: 1;
 	display: flex;
 	flex-direction: column;

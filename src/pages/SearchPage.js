@@ -10,81 +10,86 @@ import SlideshowIcon from '@material-ui/icons/Slideshow';
 import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import SettingsIcon from '@material-ui/icons/Settings';
 import AppsIcon from '@material-ui/icons/Apps';
-import { Avatar, CircularProgress } from '@material-ui/core';
+import { Button, CircularProgress } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Helmet } from 'react-helmet-async';
 
 function SearchPage() {
-	// eslint-disable-next-line
-	const [{ term }, dispatch] = useStateValue();
+	const [{ term }] = useStateValue();
 	const { data } = useGoogleSearch(term);
 
 	return (
 		<div className="search-page">
 			<Helmet>
-				<title>{term} - Buscar con Google</title>
+				<title>{`${term} - Buscar con Google`}</title>
 			</Helmet>
 			<div className="search-page-header">
-				<Link to="/">
-					<img
-						className="search-page-logo"
-						src="https://www.google.com.ar/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-						alt="Logo de Google"
-					/>
-				</Link>
+				<div className="search-page-header-logo-search">
+					<Link to="/">
+						<img
+							className="search-page-logo"
+							src="https://www.google.com.ar/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+							alt="Logo de Google"
+						/>
+					</Link>
 
-				<div className="search-page-search-and-options">
-					<Search hideButtons inputValue={term} />
+					<div className="search-page-search-and-options">
+						<Search hideButtons inputValue={term} />
 
-					<div className="search-page-options">
-						<div className="search-page-option current-option">
-							<SearchIcon />
-							<Link to="/all">Todos</Link>
-						</div>
-						<div className="search-page-option">
-							<ImageOutlinedIcon />
-							<Link to="/images">Imágenes</Link>
-						</div>
-						<div className="search-page-option">
-							<SlideshowIcon />
-							<Link to="/videos">Videos</Link>
-						</div>
-						<div className="search-page-option">
-							<RoomOutlinedIcon />
-							<Link to="/maps">Mapas</Link>
-						</div>
-						<div className="search-page-option">
-							<ChromeReaderModeOutlinedIcon />
-							<Link to="/news">Noticias</Link>
-						</div>
-						<div className="search-page-option">
-							<MoreVertIcon />
-							<Link to="/more">Más</Link>
-						</div>
-						<div className="search-page-option">
-							<Link to="/settings">Preferencias</Link>
-						</div>
-						<div className="search-page-option">
-							<Link to="/tools">Herramientas</Link>
+						<div className="search-page-options">
+							<div className="search-page-option current-option">
+								<SearchIcon />
+								<Link to="/all">Todos</Link>
+							</div>
+							<div className="search-page-option">
+								<ImageOutlinedIcon />
+								<Link to="/images">Imágenes</Link>
+							</div>
+							<div className="search-page-option">
+								<SlideshowIcon />
+								<Link to="/videos">Videos</Link>
+							</div>
+							<div className="search-page-option">
+								<ChromeReaderModeOutlinedIcon />
+								<Link to="/news">Noticias</Link>
+							</div>
+							<div className="search-page-option">
+								<RoomOutlinedIcon />
+								<Link to="/maps">Mapas</Link>
+							</div>
+							<div className="search-page-option">
+								<MoreVertIcon />
+								<Link to="/more">Más</Link>
+							</div>
+							<div className="search-page-option last-option">
+								<Link to="/tools">Herramientas</Link>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div className="search-page-avatar">
+					<SettingsIcon />
 					<AppsIcon />
-					<Avatar />
+					<Button className="search-page-button" variant="contained">
+						I<span className="search-page-button-span">niciar sesión</span>
+					</Button>
 				</div>
 			</div>
 
 			{data?.error ? (
-				<div key='0' className="search-page-limit-exceeded">
-					<h3 key='1'>Se acabaron las consultas. 😅</h3>
-					<h3 key='2'>Vuelva a intentarlo mañana. 😊</h3>
+				<div key="0" className="search-page-limit-exceeded">
+					<h3 key="1">Se acabaron las consultas. 😅</h3>
+					<h3 key="2">Vuelva a intentarlo mañana. 😊</h3>
 				</div>
 			) : data?.searchInformation ? (
 				<div className="search-page-results">
-					<p className="search-page-result-count" key='p'>
+					<p
+						className="search-page-result-count"
+						key={data?.searchInformation.formattedTotalResults}
+					>
 						Cerca de {data?.searchInformation.formattedTotalResults} resultados
 						({data?.searchInformation.formattedSearchTime} segundos)
 					</p>

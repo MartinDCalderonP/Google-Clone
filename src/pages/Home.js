@@ -2,17 +2,19 @@ import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import AppsIcon from '@material-ui/icons/Apps';
-import { Avatar } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import Search from '../components/Search';
 
-function Home() {
+export default function Home() {
 	return (
 		<div className="home">
 			<div className="home-header">
 				<Link to="/gmail">Gmail</Link>
 				<Link to="/images">Imágenes</Link>
-				<AppsIcon />
-				<Avatar />
+				<AppsIcon color="disabled" />
+				<Button className="home-header-button" variant="contained">
+					I<span className="home-header-button-span">niciar sesión</span>
+				</Button>
 			</div>
 
 			<div className="home-body">
@@ -28,5 +30,3 @@ function Home() {
 		</div>
 	);
 }
-
-export default Home;

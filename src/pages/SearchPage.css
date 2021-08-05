@@ -1,33 +1,47 @@
+.search-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .search-page-header {
 	display: flex;
 	position: sticky;
-	top: 0;
-	background-color: white;
 	z-index: 100;
 	align-items: flex-start;
+	top: 0;
+	background-color: #fff;
+	width: 95vw;
 	padding: 25px 25px 15px 25px;
 	border-bottom: 1px solid lightgray;
+	justify-content: space-between;
+}
+
+.search-page-header-logo-search {
+	display: flex;
 }
 
 .search-page-logo {
 	object-fit: contain;
 	height: 30px;
-	margin-top: 10px;
-	margin-right: 50px;
+	margin: 10px 50px 0px 10px;
 }
 
 .search-page-search-and-options {
-	width: 75vw;
+	width: 45vw;
 }
 
-.search-page-search-and-options > .search-div > .search-form > .search-input-div {
+.search-page-search-and-options
+	> .search-div
+	> .search-form
+	> .search-input-div {
 	margin-top: 0;
 	width: unset;
 	margin: unset;
 	max-width: unset;
 	background-color: #fff;
-	box-shadow: 0 1px 6px rgba(32,33,36,.28);
-	border-color: rgba(223,225,229,0);
+	box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+	border-color: rgba(223, 225, 229, 0);
 	flex-direction: row-reverse;
 }
 
@@ -60,7 +74,12 @@
 	font-size: inherit;
 }
 
-.current-option, .current-option > a {
+.search-page-option.last-option {
+	margin-left: 50px;
+}
+
+.current-option,
+.current-option > a {
 	color: #1a73e8;
 }
 
@@ -76,20 +95,35 @@
 	color: gray;
 }
 
+.search-page-button {
+	background-color: #1a73e8 !important;
+}
+
+.search-page-button:hover {
+	background-color: #2b7de9 !important;
+}
+
+.search-page-button > .MuiButton-label {
+	color: #fff;
+}
+
+.search-page-button-span {
+	text-transform: lowercase;
+}
+
 .search-page-results {
 	width: 70vw;
-	margin-top: 20px;
-	margin-bottom: 100px;
-	margin-left: 10%;
+	margin: 20px 0px 40px;
 }
 
 .search-page-result-count {
 	color: #70757a;
 	font-size: 14px;
+	margin-bottom: -20px;
 }
 
 .search-page-result {
-	margin: 40px 0;
+	margin: 40px 0px;
 }
 
 .search-page-result-title {
