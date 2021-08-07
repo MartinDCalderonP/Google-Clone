@@ -7,7 +7,7 @@
 	a {
 		margin-right: 20px;
 		text-decoration: inherit;
-		color: rgba(0, 0, 0, 0.87);
+		color: var(--letters);
 		font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
 
 		&:hover {
@@ -16,22 +16,53 @@
 	}
 
 	svg {
-		margin-right: 20px;
-		color: gray;
+		color: var(--icons);
+	}
+
+	.appsIcon {
+		margin: 0px 20px 0px 10px;
 	}
 
 	.loginButton {
-		background-color: #1a73e8 !important;
+		background-color: var(--buttonBg);
+		transition: all 0.25s linear;
 
 		&:hover {
-			background-color: #2b7de9 !important;
+			background-color: var(--buttonBgHover);
 		}
 
 		span {
-			color: #fff;
+			color: var(--buttonLetters);
 
 			.lowercaseSpan {
 				text-transform: lowercase;
+			}
+		}
+	}
+}
+
+.menu {
+	ul {
+		background-color: var(--body) !important;
+
+		.menuItem {
+			font-size: 14px !important;
+			color: var(--menuItemLetters) !important;
+
+			.themeIcon {
+				path {
+					display: none;
+				}
+			}
+
+			&:hover {
+				background-color: var(--menuItemBgHover);
+
+				.themeIcon {
+					path {
+						display: block;
+					}
+				}
 			}
 		}
 	}

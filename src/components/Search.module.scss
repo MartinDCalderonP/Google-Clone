@@ -1,7 +1,8 @@
 .input {
 	display: flex;
 	align-items: center;
-	border: 1px solid lightgray;
+	background-color: var(--body);
+	border: 1px solid var(--inputBorder);
 	height: 30px;
 	padding: 10px 20px;
 	border-radius: 999px;
@@ -9,21 +10,11 @@
 	margin: 0 auto;
 	margin-top: 20px;
 	max-width: 560px;
-
-	&.insideHeader {
-		margin-top: 0;
-		width: unset;
-		margin: unset;
-		max-width: unset;
-		background-color: #fff;
-		box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-		border-color: rgba(223, 225, 229, 0);
-		flex-direction: row-reverse;
-	}
+	transition: all 0.25s linear;
 
 	&:hover {
-		background-color: #fff;
-		box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+		background-color: var(--inputBgHover);
+		box-shadow: var(--inputBoxShadowHover);
 		border-color: rgba(223, 225, 229, 0);
 	}
 
@@ -32,6 +23,8 @@
 		padding: 10px 20px;
 		font-size: medium;
 		border: none;
+		color: var(--inputLetters);
+		background-color: transparent;
 
 		&:focus {
 			outline-width: 0;
@@ -40,6 +33,21 @@
 
 	.icon {
 		color: gray;
+	}
+
+	&.insideHeader {
+		margin-top: 0;
+		width: unset;
+		margin: unset;
+		max-width: unset;
+		background-color: var(--inputBgHover);
+		box-shadow: var(--inputBoxShadowHover);
+		border-color: rgba(223, 225, 229, 0);
+		flex-direction: row-reverse;
+
+		.icon {
+			color: var(--inputIconInsideHeader);
+		}
 	}
 }
 
@@ -51,17 +59,16 @@
 	button {
 		margin: 5px;
 		padding: 7px 15px;
-		background-color: #f8f8f8;
-		border: 1px solid white;
+		color: var(--searchButtonsLetters);
+		background-color: var(--searchButtonsBgAndBorder);
+		border: 1px solid var(--searchButtonsBgAndBorder);
 		text-transform: inherit;
-		color: #202124;
 
 		&:hover {
-			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-			background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
-			background-color: #f8f8f8;
-			border: 1px solid #c6c6c6;
-			color: #222;
+			color: var(--searchButtonsLettersHover);
+			background-color: var(--searchButtonsBgAndBorder);
+			border: 1px solid var(--searchButtonsBorderHover);
+			box-shadow: var(--searchButtonsBoxShadowHover);
 		}
 	}
 }

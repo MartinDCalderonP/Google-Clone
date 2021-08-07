@@ -1,3 +1,81 @@
+:root {
+	/* General */
+	--body: #ffffff;
+	--letters: #000000;
+
+	/* HeaderOptions.js */
+	--icons: #5f6368;
+	--buttonLetters: #ffffff;
+	--buttonBg: #1a73e8;
+	--buttonBgHover: #2b7de9;
+	--menuItemLetters: #5f6368;
+	--menuItemBgHover: rgba(0, 0, 0, 0.1);
+
+	/* Search.js */
+	--inputLetters: #000000;
+	--inputBorder: #dfe1e5;
+	--inputBgHover: #ffffff;
+	--inputBoxShadowHover: 0 1px 6px rgba(32, 33, 36, 0.28);
+	--inputIconInsideHeader: #4285f4;
+	--searchButtonsLetters: #3c4043;
+	--searchButtonsBgAndBorder: #f8f9fa;
+	--searchButtonsLettersHover: #202124;
+	--searchButtonsBorderHover: #dadce0;
+	--searchButtonsBoxShadowHover: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+	/* Home.js */
+	--offerByLetters: #3c4043;
+	--offerByLink: #1a0dab;
+
+	/* SearchPage.js */
+	--headerBorderBottom: #ebebeb;
+	--optionsLetters: #5f6368;
+	--currentOption: #1a73e8;
+	--resultsCount: #70757a;
+	--resultLink: #5f6368;
+	--resultTitle: #1a0dab;
+	--resultSnippet: #4d5156;
+}
+
+[data-theme='dark'] {
+	/* General */
+	--body: #202124;
+	--letters: #ffffff;
+
+	/* HeaderOptions.js */
+	--icons: #ffffff;
+	--buttonLetters: #202124;
+	--buttonBg: #8ab4f8;
+	--buttonBgHover: #93baf9;
+	--menuItemLetters: #969ba1;
+	--menuItemBgHover: rgba(255, 255, 255, 0.1);
+
+	/* Search.js */
+	--inputLetters: #e8eaed;
+	--inputBorder: #5f6368;
+	--inputBgHover: #303134;
+	--inputBoxShadowHover: 0 1px 6px 0 #171717;
+	--inputIconInsideHeader: #8ab4f8;
+	--searchButtonsLetters: #e8eaed;
+	--searchButtonsBgAndBorder: #303134;
+	--searchButtonsLettersHover: #e8eaed;
+	--searchButtonsBorderHover: #5f6368;
+	--searchButtonsBoxShadowHover: 0 1px 3px rgba(23, 23, 23, 0.24);
+
+	/* Home.js */
+	--offerByLetters: #bdc1c6;
+	--offerByLink: #8ab4f8;
+
+	/* SearchPage.js */
+	--headerBorderBottom: #3c4043;
+	--optionsLetters: #969ba1;
+	--currentOption: #8ab4f8;
+	--resultsCount: #9aa0a6;
+	--resultLink: #969ba1;
+	--resultTitle: #8ab4f8;
+	--resultSnippet: #bdc1c6;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +88,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--body);
 }
 
 code {

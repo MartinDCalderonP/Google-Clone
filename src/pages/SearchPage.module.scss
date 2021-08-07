@@ -2,6 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: var(--body);
+	transition: all 0.25s linear;
 
 	.header {
 		display: flex;
@@ -9,11 +11,12 @@
 		z-index: 100;
 		align-items: flex-start;
 		top: 0;
-		background-color: #fff;
+		background-color: var(--body);
 		width: 95vw;
 		padding: 25px 25px 15px 25px;
-		border-bottom: 1px solid lightgray;
+		border-bottom: 1px solid var(--headerBorderBottom);
 		justify-content: space-between;
+		transition: all 0.25s linear;
 
 		@media (max-width: 720px) {
 			flex-direction: column;
@@ -54,7 +57,7 @@
 			.options {
 				display: flex;
 				align-items: center;
-				color: grey;
+				color: var(--optionsLetters);
 				margin-top: 20px;
 				width: 70vw;
 				font-size: 1rem;
@@ -73,7 +76,7 @@
 
 					a {
 						text-decoration: none;
-						color: grey;
+						color: var(--optionsLetters);
 						margin-left: 5px;
 					}
 
@@ -87,10 +90,10 @@
 				}
 
 				.currentOption {
-					color: #1a73e8;
+					color: var(--currentOption);
 
 					a {
-						color: #1a73e8;
+						color: var(--currentOption);
 					}
 				}
 
@@ -98,6 +101,10 @@
 					margin-left: 50px;
 				}
 			}
+		}
+
+		.headerOptions {
+			margin-top: -8px;
 		}
 	}
 
@@ -107,6 +114,7 @@
 		align-items: center;
 		margin-top: 50px;
 		font-size: 20px;
+		background-color: var(--body);
 		color: darkred;
 	}
 
@@ -119,30 +127,36 @@
 		}
 
 		.resultsCount {
-			color: #70757a;
+			color: var(--resultsCount);
 			font-size: 14px;
 			margin-bottom: -20px;
 		}
 
 		.result {
 			margin: 40px 0px;
-		}
 
-		.resultTitle {
-			text-decoration: none;
-			color: #1a0dab;
-
-			&:hover {
-				text-decoration: underline;
+			a {
+				text-decoration: none;
+				color: var(--resultLink);
 			}
 
-			h2 {
-				font-weight: 500;
-			}
-		}
+			.resultTitle {
+				text-decoration: none;
+				color: var(--resultTitle);
 
-		.resultSnippet {
-			margin-top: 10px;
+				&:hover {
+					text-decoration: underline;
+				}
+
+				h2 {
+					font-weight: 500;
+				}
+			}
+
+			.resultSnippet {
+				color: var(--resultSnippet);
+				margin-top: 10px;
+			}
 		}
 	}
 

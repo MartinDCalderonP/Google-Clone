@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './SearchPage.module.scss';
 import { useStateValue } from '../stateProvider/StateProvider';
 import useGoogleSearch from '../hooks/useGoogleSearch';
@@ -20,6 +20,17 @@ export default function SearchPage() {
 	const [{ term }] = useStateValue();
 	const { data } = useGoogleSearch(term);
 	const matches = useMediaQuery('(max-width: 720px)');
+	const [logo, setLogo] = useState('');
+
+	const onSwitchTheme = (switchTheme) => {
+		!switchTheme
+			? setLogo(
+					'https://www.google.com.ar/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
+			  )
+			: setLogo(
+					'https://www.google.com.ar/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png'
+			  );
+	};
 
 	return (
 		<div className={styles.searchPage}>
@@ -30,15 +41,11 @@ export default function SearchPage() {
 			<div className={styles.header}>
 				<div className={styles.logoAndSearch}>
 					<Link to="/">
-						<img
-							className={styles.logo}
-							src="https://www.google.com.ar/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-							alt="Logo de Google"
-						/>
+						<img className={styles.logo} src={logo} alt="Logo de Google" />
 					</Link>
 
 					<div className={styles.searchAndOptions}>
-						<Search inputValue={term} insideHeader hideButtons/>
+						<Search inputValue={term} insideHeader hideButtons />
 
 						<div className={styles.options}>
 							<div className={`${styles.option} ${styles.currentOption}`}>
@@ -72,7 +79,11 @@ export default function SearchPage() {
 					</div>
 				</div>
 
-				{!matches && <HeaderOptions settingsIcon />}
+				{!matches && (
+					<div className={styles.headerOptions}>
+						<HeaderOptions settingsIcon handleSwitchTheme={onSwitchTheme} />
+					</div>
+				)}
 			</div>
 
 			{data?.error ? (
@@ -96,7 +107,7 @@ export default function SearchPage() {
 								{item.displayLink}
 								<ArrowDropDownIcon viewBox="0 0 20 15" />
 							</a>
-							<a className={styles.resultTitle} href={item.Link}>
+							<a className={styles.resultTitle} href={item.link}>
 								<h2>{item.title}</h2>
 							</a>
 							<p className={styles.resultSnippet}>{item.snippet}</p>
