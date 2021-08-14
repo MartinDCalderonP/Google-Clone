@@ -1,6 +1,6 @@
 # Google Clone
 
-This Google clone is made with ReactJS, Material UI, Custom Hooks for use the Google API and use Dark Theme & Context for use the search term. It is responsive and is deployed on Firebase: [https://clone-d3b31.web.app/](https://clone-d3b31.web.app/)
+This Google clone is made with ReactJS, Material UI, Custom Hooks for use the Google API and use Dark Theme & Context for use the search term. The styles are on SASS and CSS Modules, it is responsive and is deployed on Firebase: [https://clone-d3b31.web.app/](https://clone-d3b31.web.app/)
 
 # Things that are working now
 
