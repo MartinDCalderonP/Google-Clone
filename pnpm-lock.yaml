@@ -5,10 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
   nth-check@<2.0.1: '>=2.0.1'
   postcss@<8.4.31: '>=8.4.31'
   qs@<6.14.1: '>=6.14.1'
   tar@<=7.5.2: '>=7.5.3'
+  tar@<=7.5.3: '>=7.5.4'
   webpack-dev-server@<=5.2.0: '>=5.2.1'
 
 importers:
@@ -4017,8 +4019,8 @@ packages:
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -5730,8 +5732,8 @@ packages:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
-  tar@7.5.3:
-    resolution: {integrity: sha512-ENg5JUHUm2rDD7IvKNFGzyElLXNjachNLp6RaGf4+JOgxXHkqA+gq81ZAMCUmtMtqBsoU62lcp6S27g1LCYGGQ==}
+  tar@7.5.6:
+    resolution: {integrity: sha512-xqUeu2JAIJpXyvskvU3uvQW8PAmHrtXp2KDuMJwQqW8Sqq0CaZBAQ+dKS3RBXVhU4wC5NjAdKrmh84241gO9cA==}
     engines: {node: '>=18'}
 
   temp-dir@2.0.0:
@@ -7900,7 +7902,7 @@ snapshots:
       chalk: 3.0.0
       css.escape: 1.5.1
       dom-accessibility-api: 0.5.16
-      lodash: 4.17.21
+      lodash: 4.17.23
       redent: 3.0.0
 
   '@testing-library/react@11.2.7(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
@@ -8768,7 +8770,7 @@ snapshots:
       promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
-      tar: 7.5.3
+      tar: 7.5.6
       unique-filename: 1.1.1
     transitivePeerDependencies:
       - bluebird
@@ -8791,7 +8793,7 @@ snapshots:
       promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 9.0.1
-      tar: 7.5.3
+      tar: 7.5.6
       unique-filename: 2.0.1
     transitivePeerDependencies:
       - bluebird
@@ -9577,7 +9579,7 @@ snapshots:
       '@babel/plugin-syntax-flow': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-react-jsx': 7.27.1(@babel/core@7.28.5)
       eslint: 8.57.1
-      lodash: 4.17.21
+      lodash: 4.17.23
       string-natural-compare: 3.0.1
 
   eslint-plugin-import@2.32.0(@typescript-eslint/parser@5.62.0(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1):
@@ -10131,7 +10133,7 @@ snapshots:
   globule@1.3.4:
     dependencies:
       glob: 7.1.7
-      lodash: 4.17.21
+      lodash: 4.17.23
       minimatch: 3.0.8
 
   gopd@1.2.0: {}
@@ -10228,7 +10230,7 @@ snapshots:
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty-error: 4.0.0
       tapable: 2.3.0
     optionalDependencies:
@@ -11267,7 +11269,7 @@ snapshots:
 
   lodash.uniq@4.5.0: {}
 
-  lodash@4.17.21: {}
+  lodash@4.17.23: {}
 
   loose-envify@1.4.0:
     dependencies:
@@ -11547,7 +11549,7 @@ snapshots:
       npmlog: 6.0.2
       rimraf: 3.0.2
       semver: 7.7.3
-      tar: 7.5.3
+      tar: 7.5.6
       which: 2.0.2
     transitivePeerDependencies:
       - bluebird
@@ -11565,7 +11567,7 @@ snapshots:
       gaze: 1.1.3
       get-stdin: 4.0.1
       glob: 7.2.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       make-fetch-happen: 10.2.1
       meow: 9.0.0
       nan: 2.24.0
@@ -12256,7 +12258,7 @@ snapshots:
 
   pretty-error@4.0.0:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       renderkid: 3.0.0
 
   pretty-format@26.6.2:
@@ -12646,7 +12648,7 @@ snapshots:
       css-select: 4.3.0
       dom-converter: 0.2.0
       htmlparser2: 6.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       strip-ansi: 6.0.1
 
   require-directory@2.1.1: {}
@@ -12745,7 +12747,7 @@ snapshots:
   sass-graph@4.0.1:
     dependencies:
       glob: 7.2.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       scss-tokenizer: 0.4.3
       yargs: 17.7.2
 
@@ -13282,7 +13284,7 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  tar@7.5.3:
+  tar@7.5.6:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
@@ -13719,7 +13721,7 @@ snapshots:
 
   whatwg-url@8.7.0:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       tr46: 2.1.0
       webidl-conversions: 6.1.0
 
@@ -13802,7 +13804,7 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       fs-extra: 9.1.0
       glob: 7.2.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty-bytes: 5.6.0
       rollup: 2.79.2
       rollup-plugin-terser: 7.0.2(rollup@2.79.2)
